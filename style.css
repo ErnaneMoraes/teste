@@ -1,0 +1,115 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o conteúdo fique no topo e o rodapé no final */
+    height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+/* Estilo do container central */
+.container {
+    width: 400px; /* Largura fixa */
+    height: 450px; /* Altura fixa */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Estilo do título */
+h1 {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+/* Estilo das opções */
+.options label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilo do botão principal */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo da saída de senha */
+#passwordOutput {
+    display: none; /* Oculta inicialmente */
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Estilo para os botões de ação (copiar e limpar) */
+#actions {
+    display: none; /* Oculta os botões inicialmente */
+    margin-top: 10px;
+}
+
+#actions.show {
+    display: inline-block; /* Torna os botões visíveis quando a senha for gerada */
+}
+
+#actions button {
+    margin-right: 10px;
+    padding: 5px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #007BFF;
+    background-color: #f0f8ff;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#actions button:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 10px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}

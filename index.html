@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+        <div style="margin-bottom: 20px;">
+            <label for="length">Quantidade de caracteres:</label>
+            <input type="number" id="length" min="1" max="25" placeholder="" value="10" required>
+        </div>
+
+        <div class="options">
+            <label><input type="checkbox" id="uppercase" checked> Primeira letra maiúscula</label>
+            <label><input type="checkbox" id="special" checked> Incluir caractere especial</label>
+            <label><input type="checkbox" id="no-repeat" checked> Não repetir caracteres</label>
+            <label><input type="checkbox" id="useReference"> Usar Referência</label>
+        </div>
+
+        <div style="margin-bottom: 20px; display: none;" id="referenceWrapper">
+            <label for="reference">Referência:</label>
+            <input type="text" id="reference" placeholder="Digite um texto de referência" disabled>
+        </div>
+
+        <button onclick="generatePassword()">Gerar Senha</button>
+
+        <div class="output" id="passwordOutput"></div>
+        <div class="actions" id="actions">
+            <button onclick="copyPassword()">Copiar</button>
+            <button onclick="clearPassword()">Limpar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Esta é uma página de testes para fins de estudo, criada com ajuda de Inteligência Artificial.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
